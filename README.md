@@ -15,7 +15,7 @@ Minha paixão por tecnologia e minha vontade de aprender sempre me levam a busca
   - Criei uma API Restful integrada ao Google Calendar utilizando Python, Django e Django Rest Framework.
   - Resolvi diversos problemas de integração, como o gerenciamento de tokens JWT e a implementação de testes automatizados.
   
-- **Projeto de Jogo na Faculdade** (2023)
+- **Projeto de Jogo na Faculdade** (2024)
   - Desenvolvi um jogo durante o curso de Ciência da Computação, aplicando conceitos de desenvolvimento 2D, lógica de programação e estruturação de código.
 
 - **Projeto de Spring Boot - Site para listagem de produtos** (2023)
