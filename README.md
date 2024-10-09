@@ -19,7 +19,7 @@ Minha paixão por tecnologia e minha vontade de aprender sempre me levam a busca
   - Desenvolvi um jogo durante o curso de Ciência da Computação, aplicando conceitos de desenvolvimento 2D, lógica de programação e estruturação de código.
 
 - **Projeto de Spring Boot - Site para listagem de produtos** (2023)
-  - Implementação de um sistema de semáforos utilizando a plataforma Arduino, com controle de luzes vermelha, verde e amarela.
+  - Desenvolvi um projeto utilizando Spring Boot para criar um site que permite a listagem de produtos, oferecendo uma interface simples e eficiente para visualização e gerenciamento de itens cadastrados.
 
 ### Experiências Acadêmicas
 - **Bacharelado em Ciência da Computação** (Em andamento)
