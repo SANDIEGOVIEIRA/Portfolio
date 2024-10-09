@@ -49,8 +49,8 @@ Site desenvolvido com spring boot + react para listagem de produtos
 Se você quiser saber mais sobre mim ou discutir possíveis colaborações, entre em contato:
 
 - **Email**: sandiegovieira@outlook.com
-- **GitHub**: [Seu GitHub](https://github.com/SANDIEGOVIEIRA)
-- **LinkedIn**: [Seu LinkedIn](https://br.linkedin.com/in/sandiego-vieira-1574b2191)
+- **GitHub**: [SANDIEGOVIEIRA](https://github.com/SANDIEGOVIEIRA)
+- **LinkedIn**: [Sandiego Vieira](https://br.linkedin.com/in/sandiego-vieira-1574b2191)
 
 ---
 
