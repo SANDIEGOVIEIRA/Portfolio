@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# (dentro da pasta raiz criada pelo Vite)
+echo "node_modules
+dist
+.env*"
