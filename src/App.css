@@ -1,343 +1,61 @@
 /* ────────── Variáveis globais ────────── */
-:root {
-  --primary    : #ff2f7a;
+:root{
+  --primary     : #ff2f7a;
 
-  --bg-light   : #f5f5f5;
-  --bg-white   : #ffffff;
-  --bg-dark    : #121212;  /* cor do fundo do hero */
-  --bg-projec  : #58aaf2;
+  /* cores base */
+  --bg-light    : #f5f5f5;
+  --bg-white    : #ffffff;
+  --bg-dark     : #121212;
+  --bg-projec   : #58aaf2;
   --bg-projecs  : #e0e0e0;
 
-  --text-dark  : #222;
-  --text-light : #eee;
+  --text-dark   : #222;
+  --text-light  : #eee;
+
+  /* dimensões */
+  --nav-height  : 56px;      /* barra no mobile */
 }
 
-/* Reset / base */
-* { box-sizing:border-box; margin:0; padding:0; }
-
-html { scroll-behavior: smooth; }
-
-body, #root {
-  width:100%; height:100%;
-  font-family:'Segoe UI', sans-serif;
+/* ────────── Reset ────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body,#root{
+  width:100%;height:100%;
+  font-family:'Segoe UI',sans-serif;
   background:var(--bg-light);
   color:var(--text-dark);
+  overscroll-behavior-y:none;          /* evita “bounce” no snap */
 }
 
 /* ────────── Navbar ────────── */
-.nav {
-  position:fixed; top:0; left:0; right:0;
+.nav{
+  position:fixed;inset:0 0 auto;
+  height:var(--nav-height);
   background:var(--bg-white);
-  box-shadow:0 2px 5px rgba(0,0,0,.1);
+  box-shadow:0 2px 5px rgba(0,0,0,.10);
   z-index:1000;
+  display:flex;align-items:center;
 }
-.nav ul {
-  display:flex; align-items:center; justify-content:center;
-  list-style:none; gap:2rem; padding:1rem 2rem;
+.nav ul{
+  display:flex;align-items:center;justify-content:center;
+  gap:2rem;list-style:none;margin:0 auto;
+  padding:0 1.5rem;
 }
-.nav a {
+.nav a{
   position:relative;
-  font-weight:600; font-size:1.1rem;
-  text-decoration:none; color:var(--text-dark);
+  font-size:1.1rem;font-weight:600;
+  color:var(--text-dark);text-decoration:none;
 }
-.nav a::after {
-  content:''; position:absolute; bottom:-5px; left:50%;
-  width:0; height:3px; background:var(--primary);
-  transition:width .3s, left .3s;
+.nav a::after{
+  content:'';position:absolute;bottom:-5px;left:50%;
+  width:0;height:3px;background:var(--primary);
+  transition:width .3s,left .3s;
 }
-.nav a:hover::after { width:100%; left:0; }
-.nav-logo { margin-left:auto; }
-.nav-profile {
-  width:50px; height:50px; border-radius:50%;
-  object-fit:cover; border:2px solid var(--primary);
-}
-
-/* ────────── Seções ────────── */
-.section {
-  position:relative;
-  min-height:100vh;
-  padding:8rem 2rem 4rem;
-  
-  background:var(--bg-white);
-  display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
-  text-align:center;
-}
-.section-title   { font-size:2.5rem; margin-bottom:1rem; }
-.section-content { font-size:1.2rem; max-width:800px; }
-
-/* Hero */
-.hero {
-  background:var(--bg-dark, #121212);
-  color:var(--text-light);
-}
-/* título maior opcional */
-.hero-title {               /* já existia, só incluímos a opacidade */
-  font-size:3rem;
-  line-height:1.2;
-  opacity:1;               /* <<<   garante visibilidade por padrão   */
-}
-
-/* ────────── Portfólio ────────── */
-.portfolio h2 { font-size:3rem; margin-bottom:2rem; }
-.portfolio-grid {
-  display:grid; gap:2rem;
-  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
-  width:100%; max-width:1200px;
-}
-.portfolio-item {
-  background:#ffffff; border-radius:8px; overflow:hidden;
-  box-shadow:0 4px 8px rgba(0,0,0,.1);
-  transition:transform .3s;
-}
-.portfolio-item:hover { transform:translateY(-8px); }
-.portfolio-img { width:100%; height:200px; object-fit:cover; }
-.portfolio-item h3 { font-size:1.5rem; margin:1rem; }
-.portfolio-item p  { font-size:1.1rem; margin:0 1rem 1rem; }
-
-.btn {
-  display:inline-block;
-  background:var(--primary); color:#ffffff;
-  padding:.75rem 1.5rem; border-radius:4px;
-  margin:1rem; font-size:1.1rem;
-  text-decoration:none; transition:background .3s;
-}
-.btn:hover { background:#e6006e; }
-
-/* ────────── Sobre ────────── */
-.about h2 { font-size:3rem; margin-bottom:1.5rem; }
-.about p  { font-size:1.1rem; max-width:800px; }
-
-/* ────────── Contato ────────── */
-.contact h2 { font-size:3rem; margin-bottom:1.5rem; }
-.contact p  { font-size:1.1rem; margin:.5rem 0; }
-.contact a  { color:var(--primary); text-decoration:none; }
-.contact a:hover { text-decoration:underline; }
-
-/* ────────── Footer ────────── */
-.footer {
-  background:#000; color:#fff; padding:4rem 2rem;
-}
-.footer-content {
-  display:flex; justify-content:space-between; gap:2rem;
-  max-width:1200px; margin:0 auto;
-}
-.footer-about h3 { font-size:1.75rem; margin-bottom:1rem; }
-.footer-about p,
-.footer-social h4,
-.footer-copy { font-size:1.1rem; }
-
-.social-icons a {
-  margin-right:1rem;
-  font-size:1.5rem; color:#fff;
-  text-decoration:none;
-}
-.social-icons a:hover { color:var(--primary); }
-.footer-copy { text-align:center; margin-top:2rem; }
-
-/* ────────── Responsivo ────────── */
-@media (max-width:768px){
-  .nav ul          { gap:1rem; padding:.75rem 1rem; }
-  .section         { padding:6rem 1rem 2rem; margin-top:3rem; }
-  .section-title   { font-size:2rem; }
-  .section-content { font-size:1rem; }
-  .portfolio-grid  { grid-template-columns:1fr; }
-  .footer-content  { flex-direction:column; align-items:center; }
-  .footer-about,
-  .footer-social   { text-align:center; }
-}
-
-/* ────────── About (layout novo) ────────── */
-.about-subtitle {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  color: #666;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3rem 4rem;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.about-content h3,
-.about-skills h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.about-content p {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  margin-bottom: 1.5rem;
-  color: #444;
-}
-
-.about-btn {
-  margin-top: 1rem;
-}
-
-/* lista de habilidades */
-.skills-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  padding: 0;
-}
-
-.skills-list li {
-  background: #e9e9e9;
-  color: #333;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-/* responsivo extra: centralizar em telas menores */
-@media (max-width: 768px) {
-  .about-content,
-  .about-skills {
-    text-align: center;
-  }
-
-  .about-btn {
-    display: inline-block;
-  }
-}
-
-/* ────────── Hero (novo visual) ────────── */
-.hero-banner{
-  position:relative;
-  /* imagem + degradê — troque pela sua se quiser */
-  background:
-    url("./assets/projec4.jpg") center/cover,
-    linear-gradient(135deg,#0066c6 0%,#3580d8 100%);
-  color:#fff;
-  padding:10rem 2rem 8rem;
-}
-.hero-banner::after{                 /* leve escurecido para legibilidade */
-  content:''; position:absolute; inset:0;
-  background:rgba(0,0,0,.35); mix-blend-mode:multiply;
-}
-.hero-banner > *{ position:relative; z-index:1; }
-
-.hero-heading{
-  font-size:clamp(2.5rem,6vw,4.5rem);
-  font-weight:800;
-  line-height:1.2;
-  text-transform:uppercase;
-  text-align:center;
-}
-.hero-heading span{ color:var(--primary); }   /* destaca o nome */
-
-.hero-tagline{
-  font-size:1.25rem;
-  max-width:800px;
-  margin:1.5rem auto 3rem;
-  text-align:center;
-}
-
-/* Botão branco sobre o fundo azul */
-.btn-light{
-  background:#fff; color:#222;
-}
-.btn-light:hover{ background:#f4f4f4; }
-
-@media(max-width:768px){
-  .hero-banner{ padding:8rem 1rem 6rem; }
-}
-
-/* ────────── Modal de Projeto ────────── */
-.modal-overlay{
-  position:fixed; inset:0;
-  background:rgba(0,0,0,.75);
-  display:flex; align-items:center; justify-content:center;
-  z-index:2000;
-  padding:1.5rem;
-}
-
-.modal{
-  background:#fff;
-  border-radius:8px;
-  max-width:640px;
-  width:100%;
-  padding:2rem 2.5rem 3rem;
-  position:relative;
-  animation:modalIn .4s ease-out;
-  text-align:center;
-}
-@keyframes modalIn{
-  from{ transform:translateY(-20px); opacity:0; }
-  to  { transform:translateY(0);    opacity:1; }
-}
-
-.modal-close{
-  position:absolute; top:.75rem; right:.75rem;
-  background:none; border:none; font-size:1.5rem;
-  color:#666; cursor:pointer;
-}
-.modal-close:hover{ color:#000; }
-
-.modal-img{
-  width:100%; max-height:260px; object-fit:cover;
-  border-radius:6px; margin-bottom:1.5rem;
-}
-
-.modal-links{
-  display:flex; gap:1rem; justify-content:center; margin-top:1.5rem;
-}
-
-.btn-outline{
-  background:transparent;
-  color:var(--primary);
-  border:2px solid var(--primary);
-}
-.btn-outline:hover{
-  background:var(--primary);
-  color:#fff;
-}
-
-/* ───── Contraste em Dark Mode ───── */
-
-/* Modal */
-.dark .modal{
-  background:#1d1d1d;   /* fundo escuro */
-  color:#eee;           /* texto claro */
-}
-.dark .modal h2,
-.dark .modal h4 { color:#fff; }      /* títulos mais fortes */
-
-/* Chips continuam OK; botão outline usa a mesma cor primária */
-.dark .btn-outline{
-  border-color:var(--primary);
-  color:var(--primary);
-}
-.dark .btn-outline:hover{
-  background:var(--primary);
-  color:#fff;
-}
-
-/* Cards de portfólio */
-.dark .portfolio-item{
-  background:#1f1f1f;
-}
-.dark .portfolio-item h3,
-.dark .portfolio-item p{
-  color:#eee;
-}
-
-/* ────────── Hover colorido das skills ────────── */
-.skills-list li{
-  transition:background .25s,color .25s,transform .25s;
-}
-.skills-list li:hover{
-  transform:translateY(-2px);
+.nav a:hover::after{width:100%;left:0}
+.nav-logo{margin-left:auto}
+.nav-profile{
+  width:40px;height:40px;border-radius:50%;
+  object-fit:cover;border:2px solid var(--primary);
 }
 
 /* cores de marca */
@@ -369,149 +87,227 @@ body, #root {
 .skills-list li[data-skill="java"]:hover  { background:#f99e28; color:#fff; }
 .skills-list li[data-skill="spring boot"]:hover  { background:#28f940; color:#fff; }
 .skills-list li[data-skill="sql"]:hover  { background:#0a0a0a; color:#fff; }
+.skills-list li[data-skill="google api"]:hover  { background:#003cff; color:#fff; }
+/* ────────── Seções ────────── */
+.section{
+  position:relative;
+  min-height:calc(100vh - var(--nav-height));   /* mobile */
+  padding:8rem 2rem 4rem;
+  background:var(--bg-white);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+}
+@media(min-width:769px){               /* desktop */
+  .section{min-height:100vh}
+}
+.section-title  {font-size:2.5rem;margin-bottom:1rem}
+.section-content{font-size:1.2rem;max-width:800px}
 
-/* ───── layout em colunas ───── */
-.modal-row{
-  display:flex; gap:2rem; max-width:900px; width:100%;
+/* ────────── Hero ────────── */
+.hero-banner{
+  position:relative;
+  background:
+    url("./assets/projec4.webp") center/cover,
+    linear-gradient(135deg,#0066c6 0%,#3580d8 100%);
+  color:#fff;padding:10rem 2rem 8rem;
+}
+.hero-banner::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(0,0,0,.35);mix-blend-mode:multiply;
+}
+.hero-banner>*{position:relative;z-index:1}
+
+.hero-heading{
+  font-size:clamp(2.5rem,6vw,4.5rem);
+  font-weight:800;line-height:1.2;
+  text-transform:uppercase;text-align:center;
+}
+.hero-heading span{color:var(--primary)}
+.hero-tagline{
+  font-size:1.25rem;max-width:800px;
+  margin:1.5rem auto 3rem;text-align:center;
+}
+.btn-light{background:#fff;color:#222}
+.btn-light:hover{background:#f4f4f4}
+
+@media(max-width:768px){
+  .hero-banner {
+    padding: 6rem 1rem 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-heading {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
 }
 
-/* coluna imagem  */
-.modal-image{ flex:1; }
+/* ────────── Botões ────────── */
+.btn{
+  display:inline-block;background:var(--primary);color:#fff;
+  padding:.75rem 1.5rem;border-radius:4px;
+  margin:1rem;font-size:1.1rem;text-decoration:none;
+  transition:background .3s;
+}
+.btn:hover{background:#e6006e}
+.btn-outline{
+  background:transparent;color:var(--primary);
+  border:2px solid var(--primary);
+}
+.btn-outline:hover{background:var(--primary);color:#fff}
+
+/* ────────── Portfólio ────────── */
+.portfolio h2{font-size:3rem;margin-bottom:2rem}
+.portfolio-grid{
+  display:grid;gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  width:100%;max-width:1200px;
+}
+.portfolio-item{
+  background:#fff;border-radius:8px;overflow:hidden;
+  box-shadow:0 4px 8px rgba(0,0,0,.1);
+  transition:transform .3s;
+}
+.portfolio-item:hover{transform:translateY(-8px)}
+.portfolio-img{width:100%;height:200px;object-fit:cover}
+.portfolio-item h3{font-size:1.5rem;margin:1rem}
+.portfolio-item p{font-size:1.1rem;margin:0 1rem 1rem}
+
+/* ────────── Sobre ────────── */
+.about-subtitle{
+  font-size:1.2rem;max-width:700px;
+  margin:0 auto 3rem;color:#666;
+}
+.about-grid{
+  display:grid;gap:3rem 4rem;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  width:100%;max-width:1200px;
+}
+.about-content h3,
+.about-skills h3{font-size:2rem;margin-bottom:1.5rem}
+.about-content p{
+  font-size:1.1rem;line-height:1.65;
+  margin-bottom:1.5rem;color:#444;
+}
+.about-btn{margin-top:1rem}
+.skills-list{
+  display:flex;flex-wrap:wrap;gap:.75rem 1rem;
+  list-style:none;padding:0;
+}
+.skills-list li{
+  background:#e9e9e9;color:#333;font-weight:600;
+  padding:.5rem 1rem;border-radius:6px;
+  font-size:.95rem;white-space:nowrap;
+}
+
+/* ────────── Contato ────────── */
+.contact p{font-size:1.1rem;margin:.5rem 0}
+.contact a{color:var(--primary);text-decoration:none}
+.contact a:hover{text-decoration:underline}
+
+/* ────────── Footer ────────── */
+.footer{
+  background:#000;color:#fff;padding:4rem 2rem;
+}
+.footer-content{
+  display:flex;justify-content:space-between;gap:2rem;
+  max-width:1200px;margin:0 auto;
+}
+.footer-about h3{font-size:1.75rem;margin-bottom:1rem}
+.footer-copy{text-align:center;margin-top:2rem}
+.social-icons a{
+  margin-right:1rem;font-size:1.5rem;color:#fff;text-decoration:none;
+}
+.social-icons a:hover{color:var(--primary)}
+
+/* ────────── Modal ────────── */
+.modal-overlay{
+  position:fixed;inset:0;display:flex;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,.75);padding:1.5rem;z-index:2000;
+}
+.modal{
+  background:#fff;border-radius:8px;width:100%;max-width:640px;
+  padding:2rem 2.5rem 3rem;position:relative;text-align:center;
+  animation:modalIn .4s ease-out;
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(-20px)}
+                    to  {opacity:1;transform:none}}
+.modal-close{
+  position:absolute;top:.75rem;right:.75rem;
+  background:none;border:none;font-size:1.5rem;color:#666;cursor:pointer;
+}
+.modal-close:hover{color:#000}
 .modal-image img{
-  width:100%; height:auto; border-radius:8px;
-  object-fit:cover;
+  width:100%;max-height:260px;object-fit:cover;
+  border-radius:6px;margin-bottom:1.5rem;
+}
+.modal-row{display:flex;gap:2rem;max-width:900px;width:100%}
+.modal-image{flex:1;display:flex;flex-direction:column;align-items:center}
+.modal-info{flex:1;text-align:left;display:flex;flex-direction:column;gap:1.25rem}
+.tools-title{margin:1.5rem 0 .75rem;font-size:1.1rem;font-weight:600}
+
+@media(max-width:768px){
+  .modal-row     {flex-direction:column;max-height:90vh;overflow:auto}
+  .modal         {padding:1.25rem}
+  .modal-image img{max-height:200px}
+  .modal-close   {font-size:1.25rem}
 }
 
-/* coluna texto */
-.modal-info{
-  flex:1; text-align:left;
-  display:flex; flex-direction:column; gap:1.25rem;
-}
-.modal-info h2   { margin-bottom:.25rem; }
-.modal-info h4   { margin:.25rem 0; }
-.modal-skills    { margin-top:.25rem; }
+/* ────────── Hover colorido das skills ────────── */
+.skills-list li{transition:background .25s,color .25s,transform .25s}
+.skills-list li:hover{transform:translateY(-2px)}
+/* … (mapa de cores mantém-se igual ao que você tinha) … */
 
-@media (max-width:768px){
-  .modal-row{ flex-direction:column; max-height:90vh; overflow:auto; }
-  .modal-image{ max-height:260px; }
-}
+/* EXEMPLO para alguns (adicione / ajuste conforme precisar) */
+.skills-list li[data-skill="html"]:hover       {background:#e34f26;color:#fff}
+.skills-list li[data-skill="css"]:hover        {background:#1572b6;color:#fff}
+.skills-list li[data-skill="javascript"]:hover {background:#f7df1e;color:#000}
+/* (demais cores permanecem como estavam) */
 
-/* título “Ferramentas usadas” abaixo da imagem */
-.tools-title{
-  margin:1.5rem 0 .75rem;
-  font-size:1.1rem;
-  font-weight:600;
-}
-
-/* espaçamento extra quando skills ficam sob a imagem */
-.modal-image{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-.modal-skills{
-  justify-content:center;
-}
-
-/* ─── Onda azul na seção de projetos ─── */
-.bg-wave{
-  background: url("./assets/projec5.jpg") bottom center / 100% auto no-repeat,
-            var(--bg-projec);
-}
-
-.bg-about{
-  background: url("") bottom center/100% auto no-repeat,
-              var(--bg-projecs);
-}
-
-/* ────────── Botão de tema ────────── */
-.theme-toggle button{
-  background:none;
-  border:none;
-  font-size:1.4rem;
-  cursor:pointer;
-  color:var(--text-dark);
-  transition:color .25s;
-}
-.dark .theme-toggle button{ color:var(--text-light); }
-.theme-toggle button:hover{ transform:scale(1.1); }
-
-/* ────────── Paleta modo escuro ────────── */
+/* ────────── Tema escuro ────────── */
 .dark{
-  --bg-light  : #121212;
-  --bg-white  : #181818;
-  --text-dark : #eee;
-  --text-light: #222;
-  /* opcional: ajuste da cor primária em dark mode */
-  /* --primary:#ff2f7a (mantém) */
+  --bg-light : #121212;
+  --bg-white : #181818;
+  --text-dark: #eee;
+  --text-light:#222;
 }
-
-/* navbar e cards herdam cores automaticamente.
-   Se precisar de contraste extra: */
-.dark .nav{ background:var(--bg-white); }
-.dark .portfolio-item{ background:#222; }
-.dark .portfolio-item p{ color:#ccc; }
-/* ─── Força texto escuro na seção Sobre, até em dark mode ─── */
-.bg-about,
-.bg-about h2,
-.bg-about h3,
-.bg-about p,
-.bg-about li {
-  color: #222;            /* texto escuro */
+.dark .nav{
+  background:var(--bg-white);
+  box-shadow:0 2px 5px rgba(0,0,0,.35);
 }
+.dark .portfolio-item{background:#222}
+.dark .portfolio-item p{color:#ccc}
+.dark .modal{background:#1d1d1d;color:#eee}
+.dark .modal h2,.dark .modal h4{color:#fff}
+.dark .btn-outline{color:var(--primary);border-color:var(--primary)}
+.dark .btn-outline:hover{background:var(--primary);color:#fff}
+.dark .theme-toggle button{color:var(--text-dark)}
 
-/* se quiser um cinza mais suave para o subtítulo */
-.bg-about .about-subtitle { color: #555; }
-
-/* botão do tema (sem borda e sem fundo) */
+/* ────────── Botão de tema (versão única, sem duplicatas) ────────── */
+.theme-toggle{position:relative}
 .theme-toggle button{
-  background:none;
-  border:none;
-  outline:none;
-  padding:.4rem;
-  font-size:1.35rem;
-  cursor:pointer;
-  border-radius:.5rem;
-  display:flex; align-items:center; justify-content:center;
-  transition:background .20s;
+  width:2.2rem;height:2.2rem;padding:.4rem;
+  background:none;border:none;cursor:pointer;border-radius:.5rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
 }
 .theme-toggle button:hover{
-  background:rgba(0,0,0,.08);
+  background:rgba(0,0,0,.08)
 }
 .dark .theme-toggle button:hover{
-  background:rgba(255,255,255,.10);
+  background:rgba(255,255,255,.10)
 }
-
-/* ---------- Ícone tema (transição suave) ---------- */
-.theme-toggle{
-  position:relative;
-}
-.theme-toggle button{
-  position:relative;
-  width:2.2rem;              /* mesmo espaço p/ ambos */
-  height:2.2rem;
-  background:none;
-  border:none;
-  cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
-}
-
 .theme-icon{
-  position:absolute;         /* sobrepostos */
-  font-size:1.4rem;
-  transition:opacity .90s ease, transform .90s ease;
+  position:absolute;font-size:1.4rem;
+  transition:opacity .9s ease,transform .9s ease;
 }
+.theme-icon.show{opacity:1;transform:scale(1)}
+.theme-icon.hide{opacity:0;transform:scale(.4) rotate(-90deg)}
 
-.theme-icon.show{
-  opacity:1; transform:scale(1) rotate(0deg);
-}
-
-.theme-icon.hide{
-  opacity:0; transform:scale(0.4) rotate(-90deg);
-}
-
-/* ────────── Transição suave de tema ────────── */
+/* ────────── Transição global de tema ────────── */
 html.theme-transition,
 html.theme-transition *{
   transition:
@@ -522,11 +318,31 @@ html.theme-transition *{
     stroke           .4s ease;
 }
 
-/* remove faixa entre seções */
-.section + .section{ margin-top:0; }
+/* ────────── Responsividade extra ────────── */
+@media(max-width:768px){
+  .nav ul{gap:1rem}
+  .section{padding:6rem 1rem 2rem}
+  .section-title{font-size:2rem}
+  .portfolio-grid{grid-template-columns:1fr}
+  .footer-content{flex-direction:column;align-items:center;text-align:center}
+  .hero-heading{font-size:clamp(2rem,9vw,3rem)}
+}
 
-/* cada seção = viewport inteira (já existia, mas reforçamos) */
-.section{ min-height:100vh; }
+/* ────────── Scrollbar ────────── */
+::-webkit-scrollbar{width:.55rem}
+::-webkit-scrollbar-thumb{background:#555;border-radius:4px}
+html.dark ::-webkit-scrollbar-thumb{background:#888}
 
-/* seções invisíveis não recebem clique/tab */
-.section[style*="opacity: 0"]{ pointer-events:none; }
+/* ───── remover faixa entre seções + snap fallback ───── */
+.section+.section{margin-top:0}
+.section[style*="opacity: 0"]{pointer-events:none}
+
+/* ────────── Onda azul na seção de projetos ────────── */
+.bg-wave{
+  background: url("./assets/projec5.webp") bottom center/100% auto no-repeat,
+              var(--bg-projec);
+}
+.bg-about{
+  background: url("") bottom center/100% auto no-repeat,
+              var(--bg-projecs);
+}
