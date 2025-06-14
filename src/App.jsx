@@ -135,9 +135,9 @@ export default function App() {
               {dark ? <FaSun color="#ffc107" /> : <FaMoon color="#000000" />}
             </button>
           </li>
-          <li className="nav-logo">
+          {/*<li className="nav-logo"> (logo de nav bar)
             <img src={profileImage} alt="Perfil" className="nav-profile" />
-          </li>
+          </li>*/}
         </ul>
       </nav>
 
@@ -178,10 +178,10 @@ export default function App() {
       {/* SOBRE */}
       <section id="sobre" className="section about bg-about">
         <h2 className="section-title">Sobre Mim</h2>
-        <p className="about-subtitle">Criando soluções inteligentes com APIs e automações.</p>
+        <p className="about-subtitle"></p>
         <div className="about-grid">
           <div className="about-content">
-            <h3>Venha me conhecer!</h3>
+            <h3>Resumo</h3>
             <p>Sou <strong>Sandiego Vieira</strong>, graduando em Ciência da Computação (7º período) focado em back-end com Python/Django e Java/Spring Boot.</p>
             <p>Experiência em <strong>REST APIs</strong>, JWT, Google APIs, automação MQTT e extensões para <strong>acessibilidade digital</strong>.</p>
             <a href="#contato" className="btn about-btn">Entrar em Contato</a>
