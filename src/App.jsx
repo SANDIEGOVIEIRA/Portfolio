@@ -1,4 +1,9 @@
-// src/App.jsx (com correções finais e split de código)
+/**
+ * @license
+ * Licensed under CC BY-NC 4.0
+ * https://creativecommons.org/licenses/by-nc/4.0/
+ * Author: Sandiego Vieira
+ */
 import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import './App.css';
 import gsap from 'gsap';
