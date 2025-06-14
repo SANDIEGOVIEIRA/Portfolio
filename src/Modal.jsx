@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
 export default function Modal({ modal, close }) {
+  const [fullscreen, setFullscreen] = useState(false);
+
   if (!modal) return null;
 
   return (
@@ -9,7 +12,12 @@ export default function Modal({ modal, close }) {
         <button className="modal-close" onClick={close}><FaTimes /></button>
 
         <div className="modal-image">
-          <img src={modal.img} alt={modal.title} />
+          <img
+            src={modal.img}
+            alt={modal.title}
+            onClick={() => setFullscreen(true)}
+            className="clickable-image"
+          />
           <h4 className="tools-title">Ferramentas usadas</h4>
           <ul className="skills-list modal-skills">
             {modal.tools.map(t => (
@@ -26,6 +34,14 @@ export default function Modal({ modal, close }) {
             <a href={modal.code} className="btn btn-outline" target="_blank" rel="noreferrer">Código</a>
           </div>
         </div>
+
+        {/* Lightbox fullscreen */}
+        {fullscreen && (
+          <div className="lightbox" onClick={() => setFullscreen(false)}>
+            <img src={modal.img} alt={`Visualização de ${modal.title}`} />
+            <button className="lightbox-close" onClick={() => setFullscreen(false)}>×</button>
+          </div>
+        )}
       </div>
     </div>
   );

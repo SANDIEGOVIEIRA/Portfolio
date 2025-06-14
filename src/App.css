@@ -58,36 +58,6 @@ body,#root{
   object-fit:cover;border:2px solid var(--primary);
 }
 
-/* cores de marca */
-.skills-list li[data-skill="html"]:hover         { background:#e34f26; color:#fff; }
-.skills-list li[data-skill="css"]:hover          { background:#1572b6; color:#fff; }
-.skills-list li[data-skill="javascript"]:hover   { background:#f7df1e; color:#000; }
-.skills-list li[data-skill="react"]:hover        { background:#61dafb; color:#000; }
-.skills-list li[data-skill="python"]:hover       { background:#3776ab; color:#fff; }
-.skills-list li[data-skill="django"]:hover       { background:#092e20; color:#fff; }
-.skills-list li[data-skill="flutter"]:hover      { background:#02569b; color:#fff; }
-.skills-list li[data-skill="arduino"]:hover      { background:#00979d; color:#fff; }
-.skills-list li[data-skill="git"]:hover          { background:#f05032; color:#fff; }
-.skills-list li[data-skill="docker"]:hover       { background:#0db7ed; color:#fff; }
-.skills-list li[data-skill="kubernetes"]:hover   { background:#326ce5; color:#fff; }
-.skills-list li[data-skill="gsap"]:hover         { background:#080907; color:#000; }
-.skills-list li[data-skill="mysql"]:hover        { background:#4479a1; color:#fff; }
-.skills-list li[data-skill="postgresql"]:hover   { background:#336791; color:#fff; }
-/* extras que estavam faltando */
-.skills-list li[data-skill="ply"]:hover   { background:#cc7a00; color:#fff; } /* laranja PLY */
-.skills-list li[data-skill="lex"]:hover   { background:#ffb74d; color:#000; } /* amarelo Lex  */
-.skills-list li[data-skill="yacc"]:hover  { background:#6d4c41; color:#fff; } /* marrom  Yacc */
-.skills-list li[data-skill="rest"]:hover  { background:#ef5350; color:#fff; }
-.skills-list li[data-skill="jwt"]:hover   { background:#009688; color:#fff; }
-.skills-list li[data-skill="firebase"]:hover{background:#ffca28; color:#000;}
-.skills-list li[data-skill="dart"]:hover  { background:#0175c2; color:#fff; }
-.skills-list li[data-skill="esp32"]:hover { background:#e53935; color:#fff; }
-.skills-list li[data-skill="mqtt"]:hover  { background:#94406b; color:#fff; }
-.skills-list li[data-skill="c++"]:hover  { background:#3a28f9; color:#fff; }
-.skills-list li[data-skill="java"]:hover  { background:#f99e28; color:#fff; }
-.skills-list li[data-skill="spring boot"]:hover  { background:#28f940; color:#fff; }
-.skills-list li[data-skill="sql"]:hover  { background:#0a0a0a; color:#fff; }
-.skills-list li[data-skill="google api"]:hover  { background:#003cff; color:#fff; }
 /* ────────── Seções ────────── */
 .section{
   position:relative;
@@ -128,7 +98,12 @@ body,#root{
   margin:1.5rem auto 3rem;text-align:center;
 }
 .btn-light{background:#fff;color:#222}
-.btn-light:hover{background:#f4f4f4}
+.btn-light:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+
 
 @media(max-width:768px){
   .hero-banner {
@@ -145,13 +120,23 @@ body,#root{
 }
 
 /* ────────── Botões ────────── */
-.btn{
-  display:inline-block;background:var(--primary);color:#fff;
-  padding:.75rem 1.5rem;border-radius:4px;
-  margin:1rem;font-size:1.1rem;text-decoration:none;
-  transition:background .3s;
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: .75rem 1.5rem;
+  border-radius: 4px;
+  margin: 1rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background .3s, color .3s;
 }
-.btn:hover{background:#e6006e}
+
+.btn:hover {
+  background: #e6006e;
+  color: #fff; /* <-- garanta que a cor da fonte permanece branca */
+}
+
 .btn-outline{
   background:transparent;color:var(--primary);
   border:2px solid var(--primary);
@@ -259,13 +244,43 @@ body,#root{
 /* ────────── Hover colorido das skills ────────── */
 .skills-list li{transition:background .25s,color .25s,transform .25s}
 .skills-list li:hover{transform:translateY(-2px)}
-/* … (mapa de cores mantém-se igual ao que você tinha) … */
 
-/* EXEMPLO para alguns (adicione / ajuste conforme precisar) */
+/* cores de marca */
+.skills-list li[data-skill="html"]:hover         { background:#e34f26; color:#fff; }
+.skills-list li[data-skill="css"]:hover          { background:#1572b6; color:#fff; }
+.skills-list li[data-skill="javascript"]:hover   { background:#f7df1e; color:#000; }
+.skills-list li[data-skill="react"]:hover        { background:#61dafb; color:#000; }
+.skills-list li[data-skill="python"]:hover       { background:#3776ab; color:#fff; }
+.skills-list li[data-skill="django"]:hover       { background:#092e20; color:#fff; }
+.skills-list li[data-skill="flutter"]:hover      { background:#02569b; color:#fff; }
+.skills-list li[data-skill="arduino"]:hover      { background:#00979d; color:#fff; }
+.skills-list li[data-skill="git"]:hover          { background:#f05032; color:#fff; }
+.skills-list li[data-skill="docker"]:hover       { background:#0db7ed; color:#fff; }
+.skills-list li[data-skill="kubernetes"]:hover   { background:#326ce5; color:#fff; }
+.skills-list li[data-skill="gsap"]:hover         { background:#080907; color:#000; }
+.skills-list li[data-skill="mysql"]:hover        { background:#4479a1; color:#fff; }
+.skills-list li[data-skill="postgresql"]:hover   { background:#336791; color:#fff; }
+/* extras que estavam faltando */
+.skills-list li[data-skill="ply"]:hover   { background:#cc7a00; color:#fff; } /* laranja PLY */
+.skills-list li[data-skill="lex"]:hover   { background:#ffb74d; color:#000; } /* amarelo Lex  */
+.skills-list li[data-skill="yacc"]:hover  { background:#6d4c41; color:#fff; } /* marrom  Yacc */
+.skills-list li[data-skill="rest"]:hover  { background:#ef5350; color:#fff; }
+.skills-list li[data-skill="jwt"]:hover   { background:#009688; color:#fff; }
+.skills-list li[data-skill="firebase"]:hover{background:#ffca28; color:#000;}
+.skills-list li[data-skill="dart"]:hover  { background:#0175c2; color:#fff; }
+.skills-list li[data-skill="esp32"]:hover { background:#e53935; color:#fff; }
+.skills-list li[data-skill="mqtt"]:hover  { background:#94406b; color:#fff; }
+.skills-list li[data-skill="c++"]:hover  { background:#3a28f9; color:#fff; }
+.skills-list li[data-skill="java"]:hover  { background:#f99e28; color:#fff; }
+.skills-list li[data-skill="spring boot"]:hover  { background:#28f940; color:#fff; }
+.skills-list li[data-skill="sql"]:hover  { background:#0a0a0a; color:#fff; }
+.skills-list li[data-skill="google api"]:hover  { background:#003cff; color:#fff; }
+.skills-list li[data-skill="chrome api"]:hover  { background:#f6ff00; color:#fff; }
+.skills-list li[data-skill="tts"]:hover  { background:#ff0000; color:#fff; }
+.skills-list li[data-skill="voice"]:hover  { background:#231d1d; color:#fff; }
 .skills-list li[data-skill="html"]:hover       {background:#e34f26;color:#fff}
 .skills-list li[data-skill="css"]:hover        {background:#1572b6;color:#fff}
 .skills-list li[data-skill="javascript"]:hover {background:#f7df1e;color:#000}
-/* (demais cores permanecem como estavam) */
 
 /* ────────── Tema escuro ────────── */
 .dark{
@@ -338,11 +353,118 @@ html.dark ::-webkit-scrollbar-thumb{background:#888}
 .section[style*="opacity: 0"]{pointer-events:none}
 
 /* ────────── Onda azul na seção de projetos ────────── */
-.bg-wave{
-  background: url("./assets/projec5.webp") bottom center/100% auto no-repeat,
-              var(--bg-projec);
+.bg-wave {
+  background: url("./assets/projec5.webp") center center / cover no-repeat;
 }
+
 .bg-about{
-  background: url("") bottom center/100% auto no-repeat,
-              var(--bg-projecs);
+  background: url("./assets/project6.webp") center center / cover no-repeat;
+}
+.bg-contact{
+  background: url("./assets/project7.webp") center center / cover no-repeat;
+
+}
+
+
+/* Contraste da seção Contato em modo claro */
+.section.contact {
+  background-color: #f8f8f8;
+  color: #f8f8f8;
+}
+
+.section.about {
+  background-color: #f8f8f8;
+  color: #f8f8f8;
+}
+
+.section.bg-wave {
+  background-color: #f8f8f8; /* ou outra clara, se preferir */
+  color: #222; /* cor escura padrão da variável --text-dark */
+}
+
+
+/*teste
+/* Forçar texto branco na seção Sobre quando fundo é escuro */
+.about.bg-about {
+  color: #fff;
+}
+
+/* Corrigir cor de subtítulo e textos que estavam herdando cores esmaecidas */
+.about.bg-about .about-subtitle,
+.about.bg-about p,
+.about.bg-about h3 {
+  color: #f1f1f1; /* tom claro suave para contraste sem estourar */
+}
+
+.about.bg-about strong {
+  color: #ffffff;
+}
+
+.hero-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.hero-tagline,
+.hero-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+.portfolio h2 {
+  color: #222;
+}
+
+.dark .portfolio h2 {
+  color: #fff;
+}
+/* Texto padrão (modo claro) */
+.portfolio-item h3,
+.portfolio-item p {
+  color: #222; /* texto escuro */
+}
+
+/* Texto no modo escuro */
+.dark .portfolio-item h3,
+.dark .portfolio-item p {
+  color: #fff; /* texto claro */
+}
+/* Força o título "Projetos" a ser sempre branco */
+.portfolio h2 {
+  color: #fff !important;
+}
+.clickable-image {
+  cursor: zoom-in;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+.clickable-image:hover {
+  transform: scale(1.02);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
 }

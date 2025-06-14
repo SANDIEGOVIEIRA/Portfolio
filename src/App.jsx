@@ -7,9 +7,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import profileImage from './assets/profile.jpg';
 import heroPattern from './assets/hero-pattern.svg';
 
-import project1Img from './assets/project1.webp';
-import project2Img from './assets/project2.webp';
-import project3Img from './assets/project3.webp';
+import project2Img from './assets/project9.png';
+import project3Img from './assets/project10.png';
+import proje8ctImg from './assets/project8.png';
 
 import {
   FaLinkedin,
@@ -25,10 +25,10 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
-    title: 'Django-rest-task-api',
+    title: 'TaskAPI – Django + Google Calendar',
     summary: 'API RESTful de tarefas com JWT e Google Calendar.',
     overview: 'API para gestão de tarefas com autenticação JWT, integração com Google Calendar e testes automatizados.',
-    img: project1Img,
+    img: proje8ctImg,
     code: 'https://github.com/SANDIEGOVIEIRA/Django-rest-task-api',
     tools: ['Python','Django','JWT','Google API','Git'],
   },
@@ -43,9 +43,9 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Acessibilidade-Total',
+    title: 'Acessibilidade Total',
     summary: 'Extensão Chrome de leitura por voz.',
-    overview: 'Alta acessibilidade: alto contraste, leitura e comandos de voz em português – tudo em uma extensão Chrome.',
+    overview: 'Extensão para o Google Chrome voltada à acessibilidade digital. Oferece leitura por voz, comandos por voz em português, modo de alto contraste e ajuste de fonte em qualquer site, com foco em inclusão e usabilidade.',
     img: project3Img,
     code: 'https://github.com/SANDIEGOVIEIRA/Acessibilidade-Total',
     tools: ['JavaScript','Chrome API','TTS','Voice','Git'],
@@ -141,12 +141,24 @@ export default function App() {
         </ul>
       </nav>
 
-      {/* HERO */}
-      <section id="home" className="section hero-banner" style={{ backgroundImage: `url(${heroPattern})` }}>
-        <h1 className="hero-heading">Olá, eu sou<br /><span>Sandiego Vieira</span></h1>
-        <p className="hero-tagline">Desenvolvedor back-end apaixonado por APIs e automação.</p>
-        <a href="#portfolio" className="btn btn-light hero-btn">Ver Projetos</a>
+     {/* HERO */}
+      <section
+        id="home"
+        className="section hero-banner"
+        style={{ backgroundImage: `url(${heroPattern})` }}
+      >
+        <h1 className="hero-heading">
+          Olá, eu sou<br />
+          <span>Sandiego Vieira</span>
+        </h1>
+        <p className="hero-tagline">
+          Construindo soluções back-end eficientes com foco em performance e automação.
+        </p>
+        <a href="#portfolio" className="btn btn-light hero-btn">
+          Ver Projetos
+        </a>
       </section>
+
 
       {/* PROJETOS */}
       <section id="portfolio" className="section portfolio bg-wave">
@@ -186,7 +198,7 @@ export default function App() {
       </section>
 
       {/* CONTATO */}
-      <section id="contato" className="section contact">
+      <section id="contato" className="section contact bg-contact">
         <h2 className="section-title">Contato</h2>
         <p className="section-content">
           Email: <a href="mailto:sandiegovieira@outlook.com">sandiegovieira@outlook.com</a>
