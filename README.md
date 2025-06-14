@@ -74,14 +74,6 @@ Acesse: `http://localhost:5173`
 
 ---
 
-## 📷 Pré-visualização
-
-| Modo Claro                          | Modo Escuro                        |
-| ----------------------------------- | ---------------------------------- |
-| ![](./src/assets/preview-light.png) | ![](./src/assets/preview-dark.png) |
-
----
-
 ## 📬 Contato
 
 * 💼 [LinkedIn](https://www.linkedin.com/in/sandiego-vieira-1574b2191/)
