@@ -102,3 +102,5 @@ Desenvolvido por Sandiego Vieira.
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff)
 ![GSAP](https://img.shields.io/badge/GSAP-000000?style=for-the-badge&logo=greensock&logoColor=88CE02)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=fff)
+![Lighthouse](https://img.shields.io/badge/Lighthouse-99%2B-brightgreen?logo=lighthouse)
+![WCAG](https://img.shields.io/badge/WCAG-2.1%20AA-blue?logo=w3c)
