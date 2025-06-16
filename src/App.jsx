@@ -9,7 +9,7 @@ import './App.css';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import profileImage from './assets/profile.jpg';
+/*import profileImage from './assets/profile.jpg'; (profile)*/
 import heroPattern from './assets/hero-pattern.svg';
 
 import project2Img from './assets/project9.png';

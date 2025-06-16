@@ -267,10 +267,9 @@ body,#root{
 .skills-list li[data-skill="gsap"]:hover         { background:#080907; color:#000; }
 .skills-list li[data-skill="mysql"]:hover        { background:#4479a1; color:#fff; }
 .skills-list li[data-skill="postgresql"]:hover   { background:#336791; color:#fff; }
-/* extras que estavam faltando */
-.skills-list li[data-skill="ply"]:hover   { background:#cc7a00; color:#fff; } /* laranja PLY */
-.skills-list li[data-skill="lex"]:hover   { background:#ffb74d; color:#000; } /* amarelo Lex  */
-.skills-list li[data-skill="yacc"]:hover  { background:#6d4c41; color:#fff; } /* marrom  Yacc */
+.skills-list li[data-skill="ply"]:hover   { background:#cc7a00; color:#fff; }
+.skills-list li[data-skill="lex"]:hover   { background:#ffb74d; color:#000; } 
+.skills-list li[data-skill="yacc"]:hover  { background:#6d4c41; color:#fff; } 
 .skills-list li[data-skill="rest"]:hover  { background:#ef5350; color:#fff; }
 .skills-list li[data-skill="jwt"]:hover   { background:#009688; color:#fff; }
 .skills-list li[data-skill="firebase"]:hover{background:#ffca28; color:#000;}
@@ -282,7 +281,7 @@ body,#root{
 .skills-list li[data-skill="spring boot"]:hover  { background:#28f940; color:#fff; }
 .skills-list li[data-skill="sql"]:hover  { background:#0a0a0a; color:#fff; }
 .skills-list li[data-skill="google api"]:hover  { background:#003cff; color:#fff; }
-.skills-list li[data-skill="chrome api"]:hover  { background:#f6ff00; color:#fff; }
+.skills-list li[data-skill="chrome api"]:hover  { background:#f6ff00; color:#000; }
 .skills-list li[data-skill="tts"]:hover  { background:#ff0000; color:#fff; }
 .skills-list li[data-skill="voice"]:hover  { background:#231d1d; color:#fff; }
 .skills-list li[data-skill="html"]:hover       {background:#e34f26;color:#fff}
@@ -359,7 +358,7 @@ html.dark ::-webkit-scrollbar-thumb{background:#888}
 .section+.section{margin-top:0}
 .section[style*="opacity: 0"]{pointer-events:none}
 
-/* ────────── Onda azul na seção de projetos ────────── */
+/* ────────── backgrouds das seções ────────── */
 .bg-wave {
   background: url("./assets/projec5.webp") center center / cover no-repeat;
 }
@@ -389,8 +388,6 @@ html.dark ::-webkit-scrollbar-thumb{background:#888}
   color: #222; /* cor escura padrão da variável --text-dark */
 }
 
-
-/*teste
 /* Forçar texto branco na seção Sobre quando fundo é escuro */
 .about.bg-about {
   color: #fff;
