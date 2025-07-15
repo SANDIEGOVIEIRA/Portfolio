@@ -1,0 +1,52 @@
+{
+    "hero": {
+        "title": "Hi, I’m",
+        "subtitle": "Building complete full stack solutions focused on performance, integration and accessibility.",
+        "cta": "View Projects"
+    },
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "filter": {
+        "all": "All",
+        "frontend": "Front-end",
+        "backend": "Back-end"
+    },
+    "about": {
+        "title": "About Me",
+        "summary": "I'm Sandiego Vieira, a Computer Science student (7th semester) and full stack developer focused on APIs, automation and web applications.",
+        "skills": "My Skills",
+        "contact": "Get in Touch"
+    },
+    "contact": {
+        "title": "Contact",
+        "email": "Email",
+        "phone": "Phone"
+    },
+    "modal": {
+        "tools": "Tools used",
+        "overview": "Project Overview",
+        "code": "Code",
+        "loading": "Loading modal..."
+    },
+    "projects": [
+        {
+            "title": "TaskAPI – Django + Google Calendar",
+            "summary": "Task management RESTful API with JWT and Google Calendar integration.",
+            "overview": "API for task management with JWT authentication, Google Calendar integration, and automated testing."
+        },
+        {
+            "title": "SpringBoot + React",
+            "summary": "Full CRUD with authentication.",
+            "overview": "Full-stack project: Spring Boot backend, React frontend, product registration, and token-based security."
+        },
+        {
+            "title": "Acessibilidade Total",
+            "summary": "Chrome extension for voice reading.",
+            "overview": "Google Chrome extension focused on digital accessibility. It offers voice reading, voice commands in Portuguese, high contrast mode, and font adjustments on any site, promoting inclusion and usability."
+        }
+    ]
+}

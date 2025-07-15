@@ -1,0 +1,52 @@
+{
+    "hero": {
+        "title": "Olá, eu sou",
+        "subtitle": "Construindo soluções full stack completas com foco em performance, integração e acessibilidade.",
+        "cta": "Ver Projetos"
+    },
+    "nav": {
+        "home": "Início",
+        "projects": "Projetos",
+        "about": "Sobre",
+        "contact": "Contato"
+    },
+    "filter": {
+        "all": "Todos",
+        "frontend": "Front-end",
+        "backend": "Back-end"
+    },
+    "about": {
+        "title": "Sobre Mim",
+        "summary": "Sou Sandiego Vieira, graduando em Ciência da Computação (7º período), desenvolvedor full stack com foco em APIs, automações e aplicações web.",
+        "skills": "Minhas Habilidades",
+        "contact": "Entrar em Contato"
+    },
+    "contact": {
+        "title": "Contato",
+        "email": "Email",
+        "phone": "Telefone"
+    },
+    "modal": {
+        "tools": "Ferramentas usadas",
+        "overview": "Visão geral do projeto",
+        "code": "Código",
+        "loading": "Carregando modal..."
+    },
+    "projects": [
+        {
+            "title": "TaskAPI – Django + Google Calendar",
+            "summary": "API RESTful de tarefas com JWT e Google Calendar.",
+            "overview": "API para gestão de tarefas com autenticação JWT, integração com Google Calendar e testes automatizados."
+        },
+        {
+            "title": "SpringBoot + React",
+            "summary": "CRUD completo com autenticação.",
+            "overview": "Projeto full-stack: backend Spring Boot, front-end React, cadastro de produtos e segurança via token."
+        },
+        {
+            "title": "Acessibilidade Total",
+            "summary": "Extensão Chrome de leitura por voz.",
+            "overview": "Extensão para o Google Chrome voltada à acessibilidade digital. Oferece leitura por voz, comandos por voz em português, modo de alto contraste e ajuste de fonte em qualquer site, com foco em inclusão e usabilidade."
+        }
+    ]
+}
