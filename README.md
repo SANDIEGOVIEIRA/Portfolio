@@ -1,12 +1,12 @@
-# 💼 Portfólio Profissional
+# 💼 Portfólio Profissional – Full Stack Developer
 
-### Desenvolvido por **Sandiego Vieira** – Back-End Developer | APIs, Automação e Acessibilidade
+### Desenvolvido por **Sandiego Vieira** – Desenvolvedor Full Stack | Back-End, Automação e Acessibilidade
 
-Este é meu portfólio profissional desenvolvido em **React + Vite**, com foco em performance, acessibilidade e organização visual moderna. A proposta é apresentar minhas habilidades, experiências acadêmicas e projetos desenvolvidos nas áreas de **back-end**, **automação** e **acessibilidade digital**.
+Este é meu portfólio profissional criado com **React + Vite**, com foco em performance, responsividade e acessibilidade. Aqui você encontrará meus projetos desenvolvidos em tecnologias como **Spring Boot**, **Django**, **React** e APIs de automação, além de iniciativas voltadas para **acessibilidade digital**.
 
 ---
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias Utilizadas
 
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=FFD62E)
@@ -20,19 +20,20 @@ Este é meu portfólio profissional desenvolvido em **React + Vite**, com foco e
 
 ---
 
-## 🧠 Funcionalidades
+## ✨ Funcionalidades
 
-✅ Navegação por seções com scroll suave  
-✅ Animações com GSAP e ScrollTrigger  
-✅ Responsivo (mobile, tablet e desktop)  
-✅ Modo claro/escuro com persistência no `localStorage`  
-✅ Modal de detalhes de projeto com lazy loading  
-✅ Totalmente acessível (WCAG 2.1 AA)  
-✅ Alto desempenho (99+ no Google Lighthouse)
+- ✅ Navegação com scroll suave por seções
+- ✅ Animações suaves com GSAP + ScrollTrigger
+- ✅ Layout 100% responsivo (mobile, tablet e desktop)
+- ✅ Alternância de tema claro/escuro com persistência local
+- ✅ Modal para detalhes de projeto com **lazy loading**
+- ✅ Suporte a múltiplos idiomas com i18n
+- ✅ Acessibilidade de alto nível (WCAG 2.1 AA)
+- ✅ Pontuação 99+ no Google Lighthouse (desempenho e acessibilidade)
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🧩 Estrutura do Projeto
 
 ```bash
 .
@@ -40,7 +41,7 @@ Este é meu portfólio profissional desenvolvido em **React + Vite**, com foco e
 │   └── index.html
 ├── src/
 │   ├── assets/         # Imagens e SVGs
-│   ├── components/     # Modal de projetos
+│   ├── components/     # Componentes reutilizáveis
 │   ├── App.jsx         # Componente principal
 │   ├── App.css         # Estilos globais e responsivos
 │   └── main.jsx        # Entry point
@@ -99,7 +100,3 @@ Você pode:
 * ❌ **Não** pode usá-lo para fins comerciais ou revenda
 
 [🔗 Ver a licença completa](https://creativecommons.org/licenses/by-nc/4.0/)
-
----
-
-Desenvolvido por **Sandiego Vieira**
