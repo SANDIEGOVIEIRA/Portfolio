@@ -1,6 +1,6 @@
 # 💼 Portfólio Profissional – Full Stack Developer
 
-### Desenvolvido por **Sandiego Vieira** – Desenvolvedor Full Stack | Back-End, Automação e Acessibilidade
+### Desenvolvido por **Sandiego Vieira** – Desenvolvedor Full Stack | Automação e Acessibilidade
 
 Este é meu portfólio profissional criado com **React + Vite**, com foco em performance, responsividade e acessibilidade. Aqui você encontrará meus projetos desenvolvidos em tecnologias como **Spring Boot**, **Django**, **React** e APIs de automação, além de iniciativas voltadas para **acessibilidade digital**.
 
