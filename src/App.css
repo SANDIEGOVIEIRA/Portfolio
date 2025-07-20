@@ -5,8 +5,19 @@
  * Author: Sandiego Vieira
  */
 
+/* Reset e contenção de overflow horizontal */
+
+
 * {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -1032,4 +1043,14 @@ html.dark ::-webkit-scrollbar-thumb {
     object-fit: cover;
     border-radius: 8px;
   }
+}
+/* ajuste layout */
+.section, .portfolio-grid, .nav, .language-selector, .footer-content {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
