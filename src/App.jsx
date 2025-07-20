@@ -153,6 +153,20 @@ export default function App() {
   }, [modal]);
 
   useEffect(() => {
+  const preventTouchScroll = (e) => {
+    if (modal) e.preventDefault();
+  };
+
+  // Impedir o movimento por toque enquanto o modal estiver aberto
+  document.addEventListener('touchmove', preventTouchScroll, { passive: false });
+
+  return () => {
+    document.removeEventListener('touchmove', preventTouchScroll);
+  };
+}, [modal]);
+
+
+  useEffect(() => {
     const handleClickOutside = (e) => {
       if (!e.target.closest('.language-selector')) setShowLang(false);
     };
