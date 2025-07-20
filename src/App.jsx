@@ -6,6 +6,8 @@
  */
 import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
+
 import './App.css';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -36,6 +38,21 @@ export default function App() {
   const [dark, setDark] = useState(false);
   const [filter, setFilter] = useState('all');
   const [showLang, setShowLang] = useState(false);
+  const originalTitle = "Sandiego Vieira | Portfólio";
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      if (document.title !== originalTitle) {
+        document.title = originalTitle;
+      }
+    });
+    const titleTag = document.querySelector('title');
+    if (titleTag) {
+      observer.observe(titleTag, { childList: true });
+    }
+    return () => observer.disconnect();
+  }, []);
+
 
   const projects = [
     {
@@ -153,17 +170,17 @@ export default function App() {
   }, [modal]);
 
   useEffect(() => {
-  const preventTouchScroll = (e) => {
-    if (modal) e.preventDefault();
-  };
+    const preventTouchScroll = (e) => {
+      if (modal) e.preventDefault();
+    };
 
-  // Impedir o movimento por toque enquanto o modal estiver aberto
-  document.addEventListener('touchmove', preventTouchScroll, { passive: false });
+    // Impedir o movimento por toque enquanto o modal estiver aberto
+    document.addEventListener('touchmove', preventTouchScroll, { passive: false });
 
-  return () => {
-    document.removeEventListener('touchmove', preventTouchScroll);
-  };
-}, [modal]);
+    return () => {
+      document.removeEventListener('touchmove', preventTouchScroll);
+    };
+  }, [modal]);
 
 
   useEffect(() => {
@@ -186,6 +203,10 @@ export default function App() {
 
   return (
     <div className="App" ref={root} style={{ scrollSnapType: 'y mandatory', scrollBehavior: 'smooth' }}>
+      <Helmet>
+        <title>{originalTitle}</title>
+      </Helmet>
+
       <nav className="nav">
         <ul>
           <li><a href="#home">{t('nav.home')}</a></li>
