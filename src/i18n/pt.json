@@ -26,6 +26,7 @@
         "email": "Email",
         "phone": "Telefone"
     },
+    "projectsButton": "Ver Detalhes",
     "modal": {
         "tools": "Ferramentas usadas",
         "overview": "Visão geral do projeto",

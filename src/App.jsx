@@ -273,7 +273,7 @@ export default function App() {
                 <img src={p.img} alt={p.title} className="portfolio-img" />
                 <h3>{p.title}</h3>
                 <p>{p.summary}</p>
-                <button className="btn" onClick={() => openProject(p, i)}>{t('hero.cta')}</button>
+                <button className="btn" onClick={() => openProject(p, i)}>{t('projectsButton')}</button>
               </div>
             ))
           }

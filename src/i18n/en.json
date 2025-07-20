@@ -26,6 +26,7 @@
         "email": "Email",
         "phone": "Phone"
     },
+    "projectsButton": "View Details",
     "modal": {
         "tools": "Tools used",
         "overview": "Project Overview",
