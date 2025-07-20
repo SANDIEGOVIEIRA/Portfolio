@@ -11,7 +11,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-import heroPattern from './assets/hero-pattern.svg';
+import heroPattern from './assets/projec4.webp';
 import project2Img from './assets/project9.png';
 import project3Img from './assets/project10.png';
 import proje8ctImg from './assets/project8.png';
@@ -183,12 +183,24 @@ export default function App() {
               {dark ? <FaSun color="#ffc107" /> : <FaMoon color="#000000" />}
             </button>
           </li>
-          <li className="language-selector" style={{ position: 'relative' }}>
+          <li className={`language-selector${showLang ? ' open' : ''}`} style={{ position: 'relative' }}>
             <button
               onClick={() => setShowLang(prev => !prev)}
               aria-label="Selecionar idioma"
-              style={{ fontSize: '1.2rem', background: 'transparent', border: '2px solid #ccc', padding: '0.25rem 0.5rem', borderRadius: '8px' }}
-            >🌐</button>
+              className="lang-button"
+              style={{
+                fontSize: '1.2rem',
+                background: 'transparent',
+                padding: '0.25rem 0.5rem',
+                borderRadius: '8px',
+                transition: 'box-shadow 0.2s ease',
+                boxShadow: 'none'
+              }}
+              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 0 0 2px rgba(200, 200, 200, 0.6)'}
+              onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+            >
+              🌐
+            </button>
             {showLang && (
               <ul
                 className="lang-dropdown"
