@@ -6,7 +6,8 @@
  */
 import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet';
+import { Head } from '@unhead/react';
+import { createHead, UnheadProvider } from '@unhead/react/client';
 
 import './App.css';
 import gsap from 'gsap';
@@ -39,19 +40,6 @@ export default function App() {
   const [filter, setFilter] = useState('all');
   const [showLang, setShowLang] = useState(false);
   const originalTitle = "Sandiego Vieira | Portfólio";
-
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      if (document.title !== originalTitle) {
-        document.title = originalTitle;
-      }
-    });
-    const titleTag = document.querySelector('title');
-    if (titleTag) {
-      observer.observe(titleTag, { childList: true });
-    }
-    return () => observer.disconnect();
-  }, []);
 
 
   const projects = [
@@ -203,9 +191,9 @@ export default function App() {
 
   return (
     <div className="App" ref={root} style={{ scrollSnapType: 'y mandatory', scrollBehavior: 'smooth' }}>
-      <Helmet>
+      <Head>
         <title>{originalTitle}</title>
-      </Helmet>
+      </Head>
 
       <nav className="nav">
         <ul>
