@@ -241,7 +241,14 @@ export default function App() {
                     onMouseLeave={e => e.currentTarget.style.backgroundColor = i18n.language === code ? (dark ? '#333' : '#e4e4e4') : 'transparent'}
                   >
                     <span>{label}</span>
-                    {i18n.language === code && <FaCheck size={14} color={dark ? '#0f0' : '#007BFF'} />}
+                    {i18n.language === code && (
+                      <FaCheck
+                        size={14}
+                        color={dark ? '#0f0' : '#007BFF'}
+                        style={{ marginLeft: '1rem' }}
+                      />
+                    )}
+
                   </li>
                 ))}
               </ul>
