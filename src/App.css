@@ -5,6 +5,11 @@
  * Author: Sandiego Vieira
  */
 
+* {
+  box-sizing: border-box;
+}
+
+
 /* ────────── Variáveis globais ────────── */
 :root {
   --primary: #ff2f7a;
