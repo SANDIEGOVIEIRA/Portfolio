@@ -79,7 +79,7 @@ Acesse: `http://localhost:5173`
 
 ## 🌐 Site Publicado
 
-🔗 [https://sandiegovieira.dev](sandiegovieira.dev)
+🔗 [sandiegovieira.dev](https://sandiegovieira.dev/)
 
 ---
 
